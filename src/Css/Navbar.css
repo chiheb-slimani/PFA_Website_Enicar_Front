@@ -1,0 +1,125 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2.5rem;
+  background-color: #0170C1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Nav Buttons/Links Container */
+.nav-buttons {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Button/Link Styles - CLEAN MODERN VERSION */
+.nav-button,
+.nav-link {
+  padding: 10px 24px;
+  border-radius: 6px;
+  background-color: white;
+  color: #0170C1;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0, 0, 1); /* Smoother easing */
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.08), /* Subtler shadow */
+    0 1px 1px rgba(255, 255, 255, 0.3) inset; /* Tiny inner highlight */
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Hover Effects - Crisp & Clean */
+.nav-button:hover,
+.nav-link:hover {
+  background-color: white;
+  border-color: rgba(1, 112, 193, 0.3);
+  box-shadow: 
+    0 4px 8px rgba(1, 112, 193, 0.15), /* Soft glow */
+    0 2px 2px rgba(255, 255, 255, 0.4) inset; /* Refined inner light */
+  transform: translateY(-1px); /* Subtle lift */
+}
+
+/* Active State - Tactile feedback */
+.nav-button:active,
+.nav-link:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 1px 2px rgba(1, 112, 193, 0.2),
+    inset 0 1px 1px rgba(0, 0, 0, 0.05); /* Pressed-in effect */
+}
+
+/* Focus State - Accessible outline */
+.nav-button:focus,
+.nav-link:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 2px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.6rem 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-buttons {
+    gap: 1rem;
+    margin-top: 0.8rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-button,
+  .nav-link {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .logo-image {
+    height: 45px;
+  }
+}
+
+/* Desktop Enhancement */
+@media (min-width: 992px) {
+  .logo-image {
+    height: 55px;
+  }
+
+  .nav-buttons {
+    gap: 2.5rem;
+  }
+}
