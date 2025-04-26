@@ -49,7 +49,7 @@ const LoginPage = () => {
           </div>
 
           <div className="form-group">
-            <label>Password:</label>
+            <label>Mot de passe:</label>
             <input
               type="password"
               placeholder="••••••"
@@ -75,7 +75,7 @@ const LoginPage = () => {
               checked={remember}
               onChange={(e) => setRemember(e.target.checked)}
             />
-            <label htmlFor="remember">Remember Me</label>
+            <label htmlFor="remember">Se souvenir de moi</label>
           </div>
 
           <button type="submit">Login</button>
